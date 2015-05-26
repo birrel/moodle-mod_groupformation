@@ -486,7 +486,7 @@ echo $OUTPUT->heading ( format_string ( $groupselect->name, true, array (
 
 if (trim ( strip_tags ( $groupselect->intro ) )) {
 	echo $OUTPUT->box_start ( 'mod_introbox', 'groupselectintro' );
-	echo format_module_intro ( 'page', $groupselect, $cm->id );
+    echo format_string ( format_module_intro ( 'page', $groupselect, $cm->id ) );
 	echo $OUTPUT->box_end ();
 }
 
