@@ -15,19 +15,24 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    mod
- * @subpackage groupselect
+ * Class definition for the restore activity
+ *
+ * @package   mod_groupselect
+ * @copyright 2018 HTW Chur Roger Barras
  * @copyright  2011 onwards Eloy Lafuente (stronk7) {@link http://stronk7.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->dirroot . '/mod/groupselect/backup/moodle2/restore_groupselect_stepslib.php'); // Because it exists (must)
+// Because it exists (must).
+require_once($CFG->dirroot . '/mod/groupselect/backup/moodle2/restore_groupselect_stepslib.php');
 
 /**
- * groupselect restore task that provides all the settings and steps to perform one
- * complete restore of the activity
+ * Groupselect restore task that provides all the settings and steps to perform one complete restore of the activity.
+ *
+ * @copyright  2011 onwards Eloy Lafuente (stronk7) {@link http://stronk7.com}
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class restore_groupselect_activity_task extends restore_activity_task {
 
@@ -35,14 +40,14 @@ class restore_groupselect_activity_task extends restore_activity_task {
      * Define (add) particular settings this activity can have
      */
     protected function define_my_settings() {
-        // No particular settings for this activity
+        // No particular settings for this activity.
     }
 
     /**
      * Define (add) particular steps this activity can have
      */
     protected function define_my_steps() {
-        // label only has one structure step
+        // Label only has one structure step.
         $this->add_step(new restore_groupselect_activity_structure_step('groupselect_structure', 'groupselect.xml'));
     }
 
@@ -65,8 +70,8 @@ class restore_groupselect_activity_task extends restore_activity_task {
     static public function define_decode_rules() {
         $rules = array();
 
-        $rules[] = new restore_decode_rule('groupselectVIEWBYID', '/mod/groupselect/view.php?id=$1', 'course_module');
-        $rules[] = new restore_decode_rule('groupselectINDEX', '/mod/groupselect/index.php?id=$1', 'course');
+        $rules[] = new restore_decode_rule('GROUPSELECTVIEWBYID', '/mod/groupselect/view.php?id=$1', 'course_module');
+        $rules[] = new restore_decode_rule('GROUPSELECTINDEX', '/mod/groupselect/index.php?id=$1', 'course');
 
         return $rules;
 

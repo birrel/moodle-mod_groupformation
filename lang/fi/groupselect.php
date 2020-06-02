@@ -1,4 +1,29 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Group self selection
+ *
+ * @package    mod_groupselect
+ * @copyright  2008-2011 Petr Skoda (http://skodak.org)
+ * @copyright  2014 Tampere University of Technology, P. Pyykkönen (pirkka.pyykkonen ÄT tut.fi)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+defined('MOODLE_INTERNAL') || die;
 
 $string['action'] = 'Toiminto';
 $string['assigngroup'] = 'Jaa assistentit ryhmiin';
@@ -42,7 +67,7 @@ $string['minmembers_help'] = 'Ryhmän jäsenten vähimmäismäärä. Jos käytö
 $string['minmembers_icon'] = 'Ryhmässä on liian vähän jäseniä';
 $string['minmembers_notification'] = 'Ryhmässäsi on liian vähän jäseniä! Vähimmäismäärä on {$a}.';
 $string['modulename'] = 'Ryhmänmuodostus';
-$string['modulename_help'] = '<p>Antaa opiskelijoiden itse muodostaa ryhmät. Ominaisuudet:</p><ul><li>Opiskelija voi luoda ryhmän, antaa sille kuvauksen ja salasanan</li><li>Opiskelijat voivat liittyä ryhmiin</li><li>Assistenttien jakaminen ryhmiin</li><li>Opettaja voi ladata listan ryhmistä csv-tiedostona </li><li>Yhteensopiva Moodlen ryhmien kanssa: ryhmiä voi tarvittaessa luoda käyttäjähallinnan kautta, voi tehdä ryhmäpalautuksia jne.</li></ul><p>Beta-versio, kaikki palaute on tervetullutta! (pirkka.pyykkonen@tut.fi)</p>';
+$string['modulename_help'] = '<p>Antaa opiskelijoiden itse muodostaa ryhmät. Ominaisuudet:</p><ul><li>Opiskelija voi luoda ryhmän, antaa sille kuvauksen ja salasanan</li><li>Opiskelijat voivat liittyä ryhmiin</li><li>Assistenttien jakaminen ryhmiin</li><li>Opettaja voi ladata listan ryhmistä csv-tiedostona </li><li>Yhteensopiva Moodlen ryhmien kanssa: ryhmiä voi tarvittaessa luoda käyttäjähallinnan kautta, voi tehdä ryhmäpalautuksia jne.</li></ul>';
 $string['modulenameplural'] = 'Ryhmänmuodostukset';
 $string['nogroups'] = 'Ei luotuja ryhmiä.';
 $string['notavailableanymore'] = 'Ryhmävalinta sulkeutunut {$a}.';

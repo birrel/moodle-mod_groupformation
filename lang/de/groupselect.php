@@ -17,20 +17,15 @@
 /**
  * Group self selection
  *
- * @package    mod_groupselect
- * @copyright  2020 Roger Barras
- * @copyright  2018 HTW Chur Roger Barras
- * @copyright  2008-2011 Petr Skoda (http://skodak.org)
- * @copyright  2014 Tampere University of Technology, P. Pyykkönen (pirkka.pyykkonen ÄT tut.fi)
+ * @package   mod_groupselect
+ * @copyright 2018 HTW Chur Roger Barras
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugins = array(
-        'groupselect-jeditable' => array(
-            'files' => array(
-                'jeditable/jquery.jeditable.js',
-            ),
-         ),
-    );
+$string['privacy:metadata'] = 'Das Plugin Freie Gruppeneinteilung speichert keine persönlichen Daten.';
+$string['hidegroupmembers'] = 'Verberge Gruppenmitglieder für Teilnehmende';
+$string['hidegroupmembers_help'] = 'Wenn gesetzt, werden Gruppenmitglieder für Teilnehmende verborgen. Falls Teilnehmende die Berechtigung besitzen Gruppen zu verwalten (moodle/course:managegroups) oder auf alle Gruppen zugreifen können (moodle/site:accessallgroups), werden die Gruppenmitgleider immer angezeigt.';
+$string['hidesuspendedstudents'] = 'Verberge inaktive Teilnehmende';
+$string['hidesuspendedstudents_help'] = 'Wenn gesetzt, werden inaktive Teilnehmende aus der Ansicht verborgen und bei der Anzahl Gruppenteilnehmer nicht berücksichtig.';
